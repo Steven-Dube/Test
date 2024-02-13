@@ -1,9 +1,11 @@
-const express = require('express')
+const express = require('express');
+const dotenv = require('dotenv');
+dotenv.config({ path: '../.env' });
 const app = express();
 
-const port = 5001;
+const port = process.env.PORT;
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
     res.send("Server is running");
 })
 
