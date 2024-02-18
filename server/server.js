@@ -7,7 +7,7 @@ const app = express();
 
 const port = process.env.PORT;
 const corsOptions = {
-    origin: '*',
+    origin: 'http://127.0.0.1:5500',
     optionsSuccessStatus: 200,
     credentials: true
 }
