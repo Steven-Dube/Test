@@ -18,7 +18,8 @@ app.get("/", (req, res) => {
     try {
         res.cookie('test', 'test',{
             httpOnly: true,
-            secure: true
+            secure: true,
+            sameSite: true
         })
         res.status(200)
             .json({
